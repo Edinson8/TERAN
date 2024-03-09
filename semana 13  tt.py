@@ -9,7 +9,7 @@ def calcular_temperatura_promedio(datos):
         temperatura_promedio = suma_temperaturas / total_dias
         temperaturas_promedio_ciudades[ciudad] = temperatura_promedio
     return temperaturas_promedio_ciudades
-# Ejemplo de datos: temperaturas de 3 ciudades durante 4 semanas
+# Ejemplo de datos: temperaturas de 2 ciudades durante 4 semanas
 datos = {
     'Shushufindi': {
         'Semana 1': [25, 26, 27, 28, 29, 30, 31],

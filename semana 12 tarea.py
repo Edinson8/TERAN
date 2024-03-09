@@ -1,13 +1,26 @@
-import random
-# Definir las ciudades, días de la semana y semanas
-ciudades = ['Guayaquil', 'Ambato', 'Quito']
-dias_semana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo']
-semanas = ['Semana 1', 'Semana 2', 'Semana 3']
-# Generar datos aleatorios de temperaturas diarias para cada ciudad, día y semana
-datos_temperaturas = [[[random.randint(20, 35) for _ in range(len(dias_semana))] for _ in range(len(ciudades))] for _ in range(len(semanas))]
-# Calcular el promedio de temperaturas para cada ciudad y semana
-for ciudad_index, ciudad in enumerate(ciudades):
-    print(f"\nPromedio de temperaturas para {ciudad}:")
-    for semana_index, semana in enumerate(semanas):
-        promedio_semana = sum(datos_temperaturas[semana_index][ciudad_index]) / len(datos_temperaturas[semana_index][ciudad_index])
-        print(f"{semana}: {promedio_semana:.2f}°C")
+# Definición de la matriz 3D para representar las temperaturas diarias
+# Se asume una matriz de 2 ciudades, 7 días de la semana y 4 semanas
+temperaturas = [
+    [   # Shushufindi
+        [25, 26, 27, 28, 29, 30, 31],  # Semana 1
+        [24, 25, 26, 27, 28, 29, 30],  # Semana 2
+        [23, 24, 25, 26, 27, 28, 29],  # Semana 3
+        [22, 23, 24, 25, 26, 27, 28]   # Semana 4
+    ],
+    [   # Lago Agrio
+        [28, 29, 30, 31, 32, 33, 34],  # Semana 1
+        [27, 28, 29, 30, 31, 32, 33],  # Semana 2
+        [26, 27, 28, 29, 30, 31, 32],  # Semana 3
+        [25, 26, 27, 28, 29, 30, 31]  # Semana 4
+    ]
+]
+# Función para calcular el promedio de temperaturas por ciudad y semana
+def calcular_promedio_temperaturas(temperaturas):
+    for ciudad, ciudad_temperaturas in enumerate(temperaturas, 1):
+        print(f"Promedio de temperaturas para la Ciudad {ciudad}:")
+        for semana, semana_temperaturas in enumerate(ciudad_temperaturas, 1):
+            promedio = sum(semana_temperaturas) / len(semana_temperaturas)
+            print(f"Semana {semana}: {promedio:.2f} °C")
+        print()
+# Calcular y mostrar el promedio de temperaturas por ciudad y semana
+calcular_promedio_temperaturas(temperaturas)

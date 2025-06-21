@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Sitio Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mi Sitio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <header class="text-center p-5 bg-light">
+    <h1>Bienvenido a Somos tu aliado legal </h1>
+    <p class="lead">Una página responsiva con Bootstrap 5</p>
+  </header>
+
+  <!-- Sección Principal -->
+  <section id="servicios" class="container my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Foto1.jpg" class="card-img-top img-fluid" alt="...">
+          <div class="card-body">
+            <h3 class="card-title">Asesoramiento jurídico</h3>
+            <p class="card-text">Brindamos orientación y consejo legal sobre derechos, obligaciones y posibles escenarios legales para individuos y empresas. .</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Foto1.jpg" class="card-img-top img-fluid" alt="...">
+          <div class="card-body">
+            <h3 class="card-title">Representación legal</h3>
+            <p class="card-text">Defendemos tus intereses de sus clientes en procesos judiciales, administrativos y extrajudiciales, actuando como sus representantes legales.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Foto1.jpg" class="card-img-top img-fluid" alt="...">
+          <div class="card-body">
+            <h3 class="card-title">Litigios</h3>
+            <p class="card-text">Gestionamos y representamos a los clientes en juicios, tanto en casos civiles como penales, defendiendo sus derechos y buscando soluciones legales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario -->
+  <section id="contacto" class="container my-5">
+    <h2>Contáctanos</h2>
+    <form>
+      <div class="form-group mb-3">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre">
+      </div>
+      <div class="form-group mb-3">
+        <label for="email">Correo electrónico</label>
+        <input type="email" class="form-control" id="email">
+      </div>
+      <div class="form-group mb-3">
+        <label for="comentarios">Comentarios</label>
+        <textarea class="form-control" id="comentarios" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Collapse -->
+  <div class="container my-4">
+    <p>
+      <a class="btn btn-secondary" data-bs-toggle="collapse" href="#contenidoExtra">Mostrar información adicional</a>
+    </p>
+    <div class="collapse" id="contenidoExtra">
+      <div class="card card-body">
+        Nos enfocamos en brindarte la meejor experiencia posible. Nuestro equipo esta aqui para ayudarte (0980581671).
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center p-3">
+    <p>&copy; 2025 Mi Sitio Web | <a href="#">Privacidad</a> | <a href="#">Términos</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
